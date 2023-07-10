@@ -4,10 +4,11 @@ namespace App\Http\Controllers\Users;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -73,17 +74,30 @@ class UserController extends Controller
     }
 
     public function create(Request $request) {
+        $user_role = $request->role ? 'Client':'User';
+
         $validator = Validator::make($request->all(),[
             'name' => 'required|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:8',
-            'phone_no' => 'required|min:10|max:10'
+            'phone_no' => 'min:10|max:10',
+            'address' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'zip_code' => 'required',
+            'country' => 'required',
+            'currency' => 'required',
+            'gst_no' => '',
         ]);
         if ($validator->fails()) {
             return redirect()->back()->withInput()->with('warning','Please enter all filed required');
         }
 
-        User::create($validator->getData());
+        $validator['password'] = Hash::make($validator['password']);
+        $role = Role::where('name',$user_role)->first('id');
+
+        $user = User::create($validator);
+        $user->assignRole($role->id);
     }
 
     public function edit(){
