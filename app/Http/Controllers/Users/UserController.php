@@ -75,29 +75,43 @@ class UserController extends Controller
 
     public function create(Request $request) {
         $user_role = $request->role ? 'Client':'User';
-
         $validator = Validator::make($request->all(),[
             'name' => 'required|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:8',
-            'phone_no' => 'min:10|max:10',
+            'phone_number' => 'min:10|max:10',
             'address' => 'required',
             'city' => 'required',
             'state' => 'required',
             'zip_code' => 'required',
             'country' => 'required',
             'currency' => 'required',
-            'gst_no' => '',
+            'gst_number' => '',
         ]);
         if ($validator->fails()) {
             return redirect()->back()->withInput()->with('warning','Please enter all filed required');
         }
 
-        $validator['password'] = Hash::make($validator['password']);
+        $userData = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'phone_number' => $request->phone_number,
+            'address' => $request->address,
+            'city' => $request->city,
+            'state' => $request->state,
+            'zip_code' => $request->zip_code,
+            'country' => $request->country,
+            'currency' => $request->currency,
+            'gst_number' => $request->gst_number
+        ];
+
         $role = Role::where('name',$user_role)->first('id');
 
-        $user = User::create($validator);
+        $user = User::create($userData);
         $user->assignRole($role->id);
+
+        return redirect()->route('user.view');
     }
 
     public function edit(){

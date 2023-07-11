@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DesboardController;
 use App\Http\Controllers\Invoices\InvoiceController;
+use App\Http\Controllers\Roles\RoleController;
 use App\Http\Controllers\Users\UserController;
 
 /*
@@ -30,6 +31,10 @@ Route::group(['prefix'=>'user','as'=>'user.'], function(){
     Route::get('/',[UserController::class,'view'])->name('view');
     Route::get('/index',[UserController::class,'index'])->name('index');
     Route::post('/create',[UserController::class,'create'])->name('create');
+});
+
+Route::group(['prefix' => 'role', 'as'=>'role.'],function(){
+    Route::get('/',[RoleController::class,'index'])->name('index');
 });
 
 Route::group(['prefix'=>'invoice','as'=>'invoice.'], function(){

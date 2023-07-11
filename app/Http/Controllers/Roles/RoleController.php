@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class RoleController extends Controller
 {
     public function index() {
-        // TODO
+        return view('roles.view');
     }
 
     public function create() {

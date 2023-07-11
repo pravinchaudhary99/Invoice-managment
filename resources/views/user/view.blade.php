@@ -101,6 +101,7 @@
                                 </th>
                                 <th class="min-w-125px">Customer Name</th>
                                 <th class="min-w-125px">Email</th>
+                                <th class="min-w-125px">Phone No</th>
                                 <th class="min-w-125px">Created Date</th>
                                 <th class="text-end min-w-70px">Actions</th>
                             </tr>
@@ -129,6 +130,9 @@
                                         <a href="#" class="text-gray-600 text-hover-primary mb-1">{{ $user->email }}</a>
                                     </td>
                                     <!--end::Email=-->
+                                    <!--begin::number=-->
+                                    <td>{{ $user->phone_number ?? '-' }}</td>
+                                    <!--end::number=-->
                                     <!--begin::Date=-->
                                     <td>{{ $user->created_at }}</td>
                                     <!--end::Date=-->
@@ -147,11 +151,6 @@
                                             <!--begin::Menu item-->
                                             <div class="menu-item px-3">
                                                 <a href="" class="menu-link px-3">View</a>
-                                            </div>
-                                            <!--end::Menu item-->
-                                             <!--begin::Menu item-->
-                                             <div class="menu-item px-3">
-                                                <a href="{{ route('pdf.download',$user->id) }}" class="menu-link px-3">pdf</a>
                                             </div>
                                             <!--end::Menu item-->
                                             <!--begin::Menu item-->
@@ -250,7 +249,7 @@
                                         </label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
-                                        <input type="text" class="form-control form-control-solid" placeholder="Enter your phone number" name="phone_no" value="" />
+                                        <input type="text" class="form-control form-control-solid" placeholder="Enter your phone number" name="phone_number" value="" />
                                         <!--end::Input-->
                                     </div>
                                     <!--end::Input group-->
@@ -262,7 +261,7 @@
                                         </label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
-                                        <input type="text" class="form-control form-control-solid" placeholder="Enter Gst number" name="gst_no" value="" />
+                                        <input type="text" class="form-control form-control-solid" placeholder="Enter Gst number" name="gst_number" value="" />
                                         <!--end::Input-->
                                     </div>
                                     <!--end::Input group-->
