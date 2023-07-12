@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Users;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -64,13 +65,53 @@ class UserController extends Controller
         }
     }
 
-    public function view(){
-        $users = User::paginate(10);
-        return view('user.view',compact('users'));
+    public function view(Request $request){
+        return view('user.view');
     }
 
-    public function index() {
-        return view('user.index');
+    public function index(Request $request){
+        $user_data = [];
+        $draw = $request->draw;
+        $start = $request->start;
+        $length = $request->length;
+        $search = $request->search['value'];
+        $order = $request->order[0]['column'] ?? null;
+        $sort_order = $request->order[0]['dir'] ?? null;
+        $filter = $request->search['regex'];
+        $sort_query = null;
+        if ($order) {
+            $sort_query = $request->columns[$order]['data'];
+        }
+        $start_number = intval((int)$start * (int)$length);
+        if(!empty($search)) {
+            $user_data = User::whereDoesntHave('roles', function($query) {
+                $query->where('name','Admin');
+            })->where('name', 'like', '%' . $search . '%')->orWhere('email','like','%' . $search . '%');
+        }else {
+            if (!empty($sort_order)) {
+                $user_data = User::whereDoesntHave('roles', function($query) {
+                    $query->where('name','Admin');
+                })->orderBy($sort_query,$sort_order);
+            }else{
+                $user_data = User::whereDoesntHave('roles', function($query) {
+                    $query->where('name','Admin');
+                })->orderBy('created_at','desc');
+            }
+        }
+        if($filter == "filter"){
+            $user_data = User::whereDoesntHave('roles', function($query) {
+                $query->where('name','Admin');
+            })->whereMonth('created_at','=',$search);
+        }
+        $count = $user_data->get()->count();
+        $data = [
+            "draw"=> $draw,
+            "recordsTotal"=> $count,
+            "recordsFiltered"=> $count,
+        ];
+
+        $data['data'] = $user_data->skip($start_number)->take((int)$length)->get();
+        return response()->json($data);
     }
 
     public function create(Request $request) {

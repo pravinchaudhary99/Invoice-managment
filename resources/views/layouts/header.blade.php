@@ -845,7 +845,7 @@
 												<!--begin:Menu item-->
 												<div class="menu-item">
 													<!--begin:Menu link-->
-													<a class="menu-link @if(isset($role)&& $role == true) active @endif" href="">
+													<a class="menu-link @if(isset($role)&& $role == true) active @endif" href="{{ route('role.index') }}">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>

@@ -1,20 +1,20 @@
 $(document).ready(function(){
     var csrfToken = $('meta[name="csrf-token"]').attr('content');
-    var user_table = $("#kt_customers_table").DataTable({
+    var roleId = window.location.href.split('/')[window.location.href.split('/').length -1]
+    var user_table = $("#kt_roles_view_table").DataTable({
         processing: true,
         serverSide: true,
         stateSave:false,
         'order':[],
         "ajax": {
-            url: "/api/users",
+            url: "/api/roles/"+roleId,
             type: "POST",
             headers: {
                 'X-CSRFToken': csrfToken
             },
         },
         "columns":[
-            {
-                data:'id',
+            {   data:'id',
                 orderable:false,
                 "render": function (data, type, row, meta) {
                     var html = `<div class="form-check form-check-sm form-check-custom form-check-solid">
@@ -23,9 +23,8 @@ $(document).ready(function(){
                     return html
                 }
             },
+            { data:'id'},
             {data:'name'},
-            {data:'email'},
-            {data:'phone_number'},
             {
                 data:'created_at',
                 autoHide: false,
@@ -61,11 +60,6 @@ $(document).ready(function(){
                 }
             }
         ]
-    });
-    const filterSearch = document.querySelector('[data-kt-customer-table-filter="search"]');
-    filterSearch.addEventListener('keyup', function (e) {
-        user_table.search("",false).draw();
-        user_table.search(e.target.value).draw();
-    });
-
+        },
+    )
 });

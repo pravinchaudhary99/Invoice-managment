@@ -35,6 +35,7 @@ Route::group(['prefix'=>'user','as'=>'user.'], function(){
 
 Route::group(['prefix' => 'role', 'as'=>'role.'],function(){
     Route::get('/',[RoleController::class,'index'])->name('index');
+    Route::get('/{id}',[RoleController::class, 'view'])->name('view');
 });
 
 Route::group(['prefix'=>'invoice','as'=>'invoice.'], function(){

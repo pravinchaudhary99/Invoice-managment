@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Roles\RoleController;
+use App\Http\Controllers\Users\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('users',[UserController::class,'index'])->name('users');
+Route::post('roles/{id}',[RoleController::class,'viewData'])->name('roles');
