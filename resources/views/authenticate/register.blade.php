@@ -52,51 +52,110 @@
 								<!--begin::Heading-->
 
 								<!--begin::Separator-->
-								<div class="separator separator-content my-14">
-									<span class="w-125px text-gray-500 fw-semibold fs-7">Or with email</span>
-								</div>
-								<!--end::Separator-->
-								<!--begin::Input group=-->
-								<div class="fv-row mb-8">
-									<!--begin::Email-->
-									<input type="text" placeholder="Name" name="name" value="{{ old('name') }}" class="form-control bg-transparent" />
-									<!--end::Email-->
-								</div>
-								<!--end::Input group-->
 
-								<!--begin::Input group=-->
-								<div class="fv-row mb-8">
-									<!--begin::Email-->
-									<input type="text" placeholder="Email" name="email" value="{{ old('email') }}" autocomplete="off" class="form-control bg-transparent" />
-									<!--end::Email-->
+								<div class="d-flex flex-wrap flex-sm-nowrap mb-6 justify-content-center">
+									<ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold">
+										<!--begin::Nav item-->
+										<li class="nav-item">
+											<a class="user_role nav-link text-active-primary py-2 me-6 active" href="javascript:void(0);">User</a>
+										</li>
+										<!--end::Nav item-->
+										<!--begin::Nav item-->
+										<li class="nav-item">
+											<a class="user_role nav-link text-active-primary py-2 me-6" href="javascript:void(0);">Client</a>
+										</li>
+										<!--end::Nav item-->
+									</ul>
 								</div>
-								<!--end::Input group=-->
-
-								<!--begin::Input group-->
-								<div class="fv-row mb-8" data-kt-password-meter="true">
-									<!--begin::Wrapper-->
-									<div class="mb-1">
-										<!--begin::Input wrapper-->
-										<div class="position-relative mb-3">
-											<input class="form-control bg-transparent" type="password" placeholder="Password" name="password" autocomplete="off" />
-											<span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
-												<i class="bi bi-eye-slash fs-2"></i>
-												<i class="bi bi-eye fs-2 d-none"></i>
-											</span>
-										</div>
-										<!--end::Input wrapper-->
+								<div class="user_form" id="User">
+									<!--begin::Input group=-->
+									<div class="fv-row mb-8">
+										<!--begin::Email-->
+										<input type="text" placeholder="Name" name="name" value="{{ old('name') }}" class="form-control bg-transparent" />
+										<!--end::Email-->
 									</div>
-									<!--end::Wrapper-->
-								</div>
+									<!--end::Input group-->
 
-								<!--end::Input group=-->
-								<!--begin::Input group=-->
-								<div class="fv-row mb-8">
-									<!--begin::Repeat Password-->
-									<input placeholder="Phone No" name="phone_no" type="text" autocomplete="off" class="form-control bg-transparent" />
-									<!--end::Repeat Password-->
+									<!--begin::Input group=-->
+									<div class="fv-row mb-8">
+										<!--begin::Email-->
+										<input type="text" placeholder="Email" name="email" value="{{ old('email') }}" autocomplete="off" class="form-control bg-transparent" />
+										<!--end::Email-->
+									</div>
+									<!--end::Input group=-->
+
+									<!--begin::Input group-->
+									<div class="fv-row mb-8" data-kt-password-meter="true">
+										<!--begin::Wrapper-->
+										<div class="mb-1">
+											<!--begin::Input wrapper-->
+											<div class="position-relative mb-3">
+												<input class="form-control bg-transparent" type="password" placeholder="Password" name="password" autocomplete="off" />
+												<span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
+													<i class="bi bi-eye-slash fs-2"></i>
+													<i class="bi bi-eye fs-2 d-none"></i>
+												</span>
+											</div>
+											<!--end::Input wrapper-->
+										</div>
+										<!--end::Wrapper-->
+									</div>
+
+									<!--end::Input group=-->
+									<!--begin::Input group=-->
+									<div class="fv-row mb-8">
+										<!--begin::Repeat Password-->
+										<input placeholder="Phone No" name="phone_no" type="text" autocomplete="off" class="form-control bg-transparent" />
+										<!--end::Repeat Password-->
+									</div>
+									<!--end::Input group=-->
+
 								</div>
-								<!--end::Input group=-->
+								<!--Client-->
+								<div class="client_form d-none" id="Client">
+									<!--begin::Input group=-->
+									<div class="fv-row mb-8">
+										<!--begin::Email-->
+										<input type="text" placeholder="Name" name="name" value="{{ old('name') }}" class="form-control bg-transparent" />
+										<!--end::Email-->
+									</div>
+									<!--end::Input group-->
+
+									<!--begin::Input group=-->
+									<div class="fv-row mb-8">
+										<!--begin::Email-->
+										<input type="text" placeholder="Email" name="email" value="{{ old('email') }}" autocomplete="off" class="form-control bg-transparent" />
+										<!--end::Email-->
+									</div>
+									<!--end::Input group=-->
+
+									<!--begin::Input group-->
+									<div class="fv-row mb-8" data-kt-password-meter="true">
+										<!--begin::Wrapper-->
+										<div class="mb-1">
+											<!--begin::Input wrapper-->
+											<div class="position-relative mb-3">
+												<input class="form-control bg-transparent" type="password" placeholder="Password" name="password" autocomplete="off" />
+												<span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
+													<i class="bi bi-eye-slash fs-2"></i>
+													<i class="bi bi-eye fs-2 d-none"></i>
+												</span>
+											</div>
+											<!--end::Input wrapper-->
+										</div>
+										<!--end::Wrapper-->
+									</div>
+
+									<!--end::Input group=-->
+									<!--begin::Input group=-->
+									<div class="fv-row mb-8">
+										<!--begin::Repeat Password-->
+										<input placeholder="Phone No" name="phone_no" type="text" autocomplete="off" class="form-control bg-transparent" />
+										<!--end::Repeat Password-->
+									</div>
+									<!--end::Input group=-->
+
+								</div>
 
 								<!--begin::Submit button-->
 								<div class="d-grid mb-10">
@@ -161,4 +220,19 @@
 	<!--end::Body-->
 
 <!-- Mirrored from preview.keenthemes.com/authentication/layouts/corporate/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Nov 2022 05:02:03 GMT -->
+<script>
+	$(document).on("click",".user_role",function(){
+		$('.user_role').removeClass('active');
+        $(this).addClass('active');
+		var class_name = $(this).text();
+		if(class_name == 'Client'){
+			$("#User").addClass('d-none');
+			$("#Client").removeClass('d-none')
+		}else{
+			$("#Client").addClass('d-none');
+			$("#User").removeClass('d-none')
+		}
+    });
+</script>
 </html>
+
