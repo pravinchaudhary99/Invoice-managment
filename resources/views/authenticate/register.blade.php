@@ -40,7 +40,7 @@
 						<!--begin::Wrapper-->
 						<div class="w-lg-400px p-10">
 							<!--begin::Form-->
-							<form class="form w-100" novalidate="novalidate" id="kt_sign_up_form" method="POST" action="{{ route('register') }}">
+							<form class="form w-100" novalidate="novalidate" id="kt_sign_up_form" method="POST" action="{{ route('user.register') }}">
 								@csrf
 								<!--begin::Heading-->
 								<div class="text-center mb-11">

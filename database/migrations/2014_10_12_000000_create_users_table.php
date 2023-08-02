@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('currency')->nullable();
             $table->string('phone_number')->nullable();
             $table->string('gst_number')->nullable();
+            $table->string('profile_picture')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

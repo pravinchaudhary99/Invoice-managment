@@ -18,14 +18,12 @@ use App\Http\Controllers\Users\UserController;
 |
 */
 
-Auth::routes();
-
 Route::get('/',[DesboardController::class,'index'])->name('home')->middleware('auth');
 
 Route::get('login',[UserController::class, 'login'])->name('login');
 Route::post('authenticate',[UserController::class, 'authenticate'])->name('authenticate');
 Route::get('register',[UserController::class, 'register'])->name('register');
-Route::post('register',[UserController::class, 'registerUser'])->name('register');
+Route::post('user/register',[UserController::class, 'registerUser'])->name('user.register');
 Route::get('logout',[UserController::class, 'logout'])->name('logout')->middleware('auth');
 
 Route::group(['prefix'=>'user','as'=>'user.'], function(){
