@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DesboardController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Invoices\InvoiceController;
+use App\Http\Controllers\Products\ProductsController;
 use App\Http\Controllers\Roles\RoleController;
 use App\Http\Controllers\Users\UserController;
 
@@ -18,7 +19,7 @@ use App\Http\Controllers\Users\UserController;
 |
 */
 
-Route::get('/',[DesboardController::class,'index'])->name('home')->middleware('auth');
+Route::get('/',[DashboardController::class,'index'])->name('home')->middleware('auth');
 
 Route::get('login',[UserController::class, 'login'])->name('login');
 Route::post('authenticate',[UserController::class, 'authenticate'])->name('authenticate');
@@ -42,4 +43,10 @@ Route::group(['prefix'=>'invoice','as'=>'invoice.'], function(){
     Route::post('/create',[InvoiceController::class,'create'])->name('create');
     Route::get('/edit/{id}',[InvoiceController::class,'edit'])->name('edit');
     Route::get('/delete/{id}',[InvoiceController::class,'delete'])->name('delete');
+});
+
+Route::group(['prefix'=>'products','as'=>'products.'], function(){
+    Route::get('/', [ProductsController::class, 'list'])->name('list');
+    Route::get('/create', [ProductsController::class, 'index'])->name('index');
+    Route::get('/edit/{id}', [ProductsController::class, 'edit'])->name('edit');
 });
