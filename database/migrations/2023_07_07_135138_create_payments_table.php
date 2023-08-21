@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('payments', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('invoice_id');
             $table->float('total_amount')->nullable();
-            $table->string('status')->default('unpaid');
+            $table->string('status')->default('unpaid')->index();
             $table->float('remainig_amount')->nullable();
             $table->date('due_date')->nullable();
             $table->timestamps();

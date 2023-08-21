@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('invoices', function (Blueprint $table) {
-            $table->id();
-            $table->string('invoice_number')->nullable();
-            $table->date('start_date');
-            $table->date('due_date');
+            $table->bigIncrements('id');
+            $table->string('invoice_number')->nullable()->index();
+            $table->date('start_date')->index();
+            $table->date('due_date')->index();
             $table->string('address');
             $table->string('state');
             $table->string('zip_code');
