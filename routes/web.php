@@ -1,12 +1,13 @@
 <?php
 
+use App\Jobs\Products\ProductCreate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\Invoices\InvoiceController;
-use App\Http\Controllers\Products\ProductsController;
 use App\Http\Controllers\Roles\RoleController;
 use App\Http\Controllers\Users\UserController;
+use App\Http\Controllers\Invoices\InvoiceController;
+use App\Http\Controllers\Products\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +48,6 @@ Route::group(['prefix'=>'invoice','as'=>'invoice.'], function(){
 
 Route::group(['prefix'=>'products','as'=>'products.'], function(){
     Route::get('/', [ProductsController::class, 'list'])->name('list');
-    Route::get('/create', [ProductsController::class, 'index'])->name('index');
+    Route::get('/index', [ProductsController::class, 'index'])->name('index');
     Route::get('/edit/{id}', [ProductsController::class, 'edit'])->name('edit');
 });

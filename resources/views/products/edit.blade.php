@@ -66,7 +66,7 @@
         <!--begin::Content-->
         <div id="kt_app_content" class="app-content  flex-column-fluid ">
             <!--begin::Form-->
-            <form id="kt_ecommerce_add_product_form"
+            <form id="product_form"
                 class="form d-flex flex-column flex-lg-row fv-plugins-bootstrap5 fv-plugins-framework"
                 data-kt-redirect="">
                 <!--begin::Aside column-->
@@ -142,7 +142,7 @@
 
                             <!--begin::Card toolbar-->
                             <div class="card-toolbar">
-                                <div class="rounded-circle bg-success w-15px h-15px" id="kt_ecommerce_add_product_status"></div>
+                                <div class="rounded-circle bg-success w-15px h-15px" id="product_status"></div>
                             </div>
                             <!--begin::Card toolbar-->
                         </div>
@@ -153,8 +153,8 @@
                             <!--begin::Select2-->
                             <select class="form-select mb-2 select2-hidden-accessible" data-control="select2"
                                 data-hide-search="true" data-placeholder="Select an option"
-                                id="kt_ecommerce_add_product_status_select"
-                                data-select2-id="select2-data-kt_ecommerce_add_product_status_select" tabindex="-1"
+                                id="product_status_select"
+                                data-select2-id="select2-data-product_status_select" tabindex="-1"
                                 aria-hidden="true" data-kt-initialized="1">
                                 <option></option>
                                 <option value="published" selected="" data-select2-id="select2-data-2-jqqy">Published
@@ -166,10 +166,10 @@
                                 data-select2-id="select2-data-1-7jaz" style="width: 100%;"><span class="selection"><span
                                         class="select2-selection select2-selection--single form-select mb-2" role="combobox"
                                         aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false"
-                                        aria-labelledby="select2-kt_ecommerce_add_product_status_select-container"
-                                        aria-controls="select2-kt_ecommerce_add_product_status_select-container"><span
+                                        aria-labelledby="select2-product_status_select-container"
+                                        aria-controls="select2-product_status_select-container"><span
                                             class="select2-selection__rendered"
-                                            id="select2-kt_ecommerce_add_product_status_select-container" role="textbox"
+                                            id="select2-product_status_select-container" role="textbox"
                                             aria-readonly="true" title="Published">Published</span><span
                                             class="select2-selection__arrow" role="presentation"><b
                                                 role="presentation"></b></span></span></span><span class="dropdown-wrapper"
@@ -182,9 +182,9 @@
 
                             <!--begin::Datepicker-->
                             <div class="d-none mt-10">
-                                <label for="kt_ecommerce_add_product_status_datepicker" class="form-label">Select publishing
+                                <label for="product_status_datepicker" class="form-label">Select publishing
                                     date and time</label>
-                                <input class="form-control flatpickr-input" id="kt_ecommerce_add_product_status_datepicker"
+                                <input class="form-control flatpickr-input" id="product_status_datepicker"
                                     placeholder="Pick date &amp; time" type="text" readonly="readonly">
                             </div>
                             <!--end::Datepicker-->
@@ -209,7 +209,7 @@
                         <div class="card-body pt-0">
                             <!--begin::Input group-->
                             <!--begin::Label-->
-                            <label class="form-label">Categories</label>
+                            <label class="form-label">categorie</label>
                             <!--end::Label-->
 
                             <!--begin::Select2-->
@@ -281,7 +281,7 @@
                                     class="tagify__input" role="textbox" aria-autocomplete="both"
                                     aria-multiline="false"></span>
                                 ​
-                            </tags><input id="kt_ecommerce_add_product_tags" name="kt_ecommerce_add_product_tags"
+                            </tags><input id="product_tags" name="product_tags"
                                 class="form-control mb-2" value="new, trending, sale" tabindex="-1">
                             <!--end::Input-->
 
@@ -305,14 +305,14 @@
                         <!--begin:::Tab item-->
                         <li class="nav-item" role="presentation">
                             <a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab"
-                                href="#kt_ecommerce_add_product_general" aria-selected="true" role="tab">General</a>
+                                href="#product_general" aria-selected="true" role="tab">General</a>
                         </li>
                         <!--end:::Tab item-->
 
                         <!--begin:::Tab item-->
                         <li class="nav-item" role="presentation">
                             <a class="nav-link text-active-primary pb-4" data-bs-toggle="tab"
-                                href="#kt_ecommerce_add_product_advanced" aria-selected="false" role="tab"
+                                href="#product_advanced" aria-selected="false" role="tab"
                                 tabindex="-1">Advanced</a>
                         </li>
                         <!--end:::Tab item-->
@@ -329,7 +329,7 @@
                     <!--begin::Tab content-->
                     <div class="tab-content">
                         <!--begin::Tab pane-->
-                        <div class="tab-pane fade active show" id="kt_ecommerce_add_product_general" role="tab-panel">
+                        <div class="tab-pane fade active show" id="product_general" role="tab-panel">
                             <div class="d-flex flex-column gap-7 gap-lg-10">
 
                                 <!--begin::General options-->
@@ -432,8 +432,8 @@
                                                             <line class="ql-stroke" x1="10" x2="8"
                                                                 y1="5" y2="13"></line>
                                                         </svg></button></span></div>
-                                            <div id="kt_ecommerce_add_product_description"
-                                                name="kt_ecommerce_add_product_description"
+                                            <div id="product_description"
+                                                name="product_description"
                                                 class="min-h-200px mb-2 ql-container ql-snow">
                                                 <div class="ql-editor ql-blank" data-gramm="false" contenteditable="true"
                                                     data-placeholder="Type your text here...">
@@ -473,7 +473,7 @@
                                         <!--begin::Input group-->
                                         <div class="fv-row mb-2">
                                             <!--begin::Dropzone-->
-                                            <div class="dropzone dz-clickable" id="kt_ecommerce_add_product_media">
+                                            <div class="dropzone dz-clickable" id="product_media">
                                                 <!--begin::Message-->
                                                 <div class="dz-message needsclick">
                                                     <!--begin::Icon-->
@@ -561,7 +561,7 @@
                                                         <span
                                                             class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
                                                             <input class="form-check-input" type="radio"
-                                                                name="discount_option" value="1">
+                                                                name="product_discount_type" value="1">
                                                         </span>
                                                         <!--end::Radio-->
 
@@ -585,7 +585,7 @@
                                                         <span
                                                             class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
                                                             <input class="form-check-input" type="radio"
-                                                                name="discount_option" value="2" checked="checked">
+                                                                name="product_discount_type" value="2" checked="checked">
                                                         </span>
                                                         <!--end::Radio-->
 
@@ -610,7 +610,7 @@
                                                         <span
                                                             class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
                                                             <input class="form-check-input" type="radio"
-                                                                name="discount_option" value="3">
+                                                                name="product_discount_type" value="3">
                                                         </span>
                                                         <!--end::Radio-->
 
@@ -629,7 +629,7 @@
                                         <!--end::Input group-->
 
                                         <!--begin::Input group-->
-                                        <div class=" mb-10 fv-row" id="kt_ecommerce_add_product_discount_percentage">
+                                        <div class=" mb-10 fv-row" id="product_discount_percentage">
                                             <!--begin::Label-->
                                             <label class="form-label">Set Discount Percentage</label>
                                             <!--end::Label-->
@@ -638,10 +638,10 @@
                                             <div class="d-flex flex-column text-center mb-5">
                                                 <div class="d-flex align-items-start justify-content-center mb-7">
                                                     <span class="fw-bold fs-3x"
-                                                        id="kt_ecommerce_add_product_discount_label">10</span>
+                                                        id="product_discount_label">10</span>
                                                     <span class="fw-bold fs-4 mt-1 ms-2">%</span>
                                                 </div>
-                                                <div id="kt_ecommerce_add_product_discount_slider"
+                                                <div id="product_discount_slider"
                                                     class="noUi-sm noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
                                                     <div class="noUi-base">
                                                         <div class="noUi-connects"></div>
@@ -667,13 +667,13 @@
                                         <!--end::Input group-->
 
                                         <!--begin::Input group-->
-                                        <div class="d-none mb-10 fv-row" id="kt_ecommerce_add_product_discount_fixed">
+                                        <div class="d-none mb-10 fv-row" id="product_discount_fixed">
                                             <!--begin::Label-->
                                             <label class="form-label">Fixed Discounted Price</label>
                                             <!--end::Label-->
 
                                             <!--begin::Input-->
-                                            <input type="text" name="dicsounted_price" class="form-control mb-2"
+                                            <input type="text" name="product_discount" class="form-control mb-2"
                                                 placeholder="Discounted price">
                                             <!--end::Input-->
 
@@ -754,7 +754,7 @@
                         <!--end::Tab pane-->
 
                         <!--begin::Tab pane-->
-                        <div class="tab-pane fade" id="kt_ecommerce_add_product_advanced" role="tab-panel">
+                        <div class="tab-pane fade" id="product_advanced" role="tab-panel">
                             <div class="d-flex flex-column gap-7 gap-lg-10">
 
                                 <!--begin::Inventory-->
@@ -878,19 +878,19 @@
                                             <!--end::Label-->
 
                                             <!--begin::Repeater-->
-                                            <div id="kt_ecommerce_add_product_options">
+                                            <div id="product_types">
                                                 <!--begin::Form group-->
                                                 <div class="form-group">
-                                                    <div data-repeater-list="kt_ecommerce_add_product_options"
+                                                    <div data-repeater-list="product_types"
                                                         class="d-flex flex-column gap-3">
                                                         <div data-repeater-item=""
                                                             class="form-group d-flex flex-wrap align-items-center gap-5">
                                                             <!--begin::Select2-->
                                                             <div class="w-100 w-md-200px">
                                                                 <select class="form-select select2-hidden-accessible"
-                                                                    name="kt_ecommerce_add_product_options[0][product_option]"
+                                                                    name="product_types[0][product_type]"
                                                                     data-placeholder="Select a variation"
-                                                                    data-kt-ecommerce-catalog-add-product="product_option"
+                                                                    data-kt-ecommerce-catalog-add-product="product_type"
                                                                     data-select2-id="select2-data-112-b2ww" tabindex="-1"
                                                                     aria-hidden="true">
                                                                     <option data-select2-id="select2-data-114-8soy"></option>
@@ -906,10 +906,10 @@
                                                                             role="combobox" aria-haspopup="true"
                                                                             aria-expanded="false" tabindex="0"
                                                                             aria-disabled="false"
-                                                                            aria-labelledby="select2-kt_ecommerce_add_product_options0product_option-bo-container"
-                                                                            aria-controls="select2-kt_ecommerce_add_product_options0product_option-bo-container"><span
+                                                                            aria-labelledby="select2-product_types0product_type-bo-container"
+                                                                            aria-controls="select2-product_types0product_type-bo-container"><span
                                                                                 class="select2-selection__rendered"
-                                                                                id="select2-kt_ecommerce_add_product_options0product_option-bo-container"
+                                                                                id="select2-product_types0product_type-bo-container"
                                                                                 role="textbox" aria-readonly="true"
                                                                                 title="Select a variation"><span
                                                                                     class="select2-selection__placeholder">Select
@@ -924,7 +924,7 @@
 
                                                             <!--begin::Input-->
                                                             <input type="text" class="form-control mw-100 w-200px"
-                                                                name="kt_ecommerce_add_product_options[0][product_option_value]"
+                                                                name="product_types[0][product_type_value]"
                                                                 placeholder="Variation">
                                                             <!--end::Input-->
 
@@ -1724,14 +1724,14 @@
 
                     <div class="d-flex justify-content-end">
                         <!--begin::Button-->
-                        <a href="/metronic8/demo25/../demo25/apps/ecommerce/catalog/products.html"
-                            id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">
+                        <a href=""
+                            id="product_cancel" class="btn btn-light me-5">
                             Cancel
                         </a>
                         <!--end::Button-->
 
                         <!--begin::Button-->
-                        <button type="submit" id="kt_ecommerce_add_product_submit" class="btn btn-primary">
+                        <button type="submit" id="product_submit" class="btn btn-primary">
                             <span class="indicator-label">
                                 Save Changes
                             </span>

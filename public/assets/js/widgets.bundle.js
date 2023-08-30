@@ -839,7 +839,7 @@ var KTSlidersWidget3 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: ['', 'Apr 05', 'Apr 06', 'Apr 07', 'Apr 08', 'Apr 09', 'Apr 11', 'Apr 12', 'Apr 14', 'Apr 15', 'Apr 16', 'Apr 17', 'Apr 18', ''],
+                categorie: ['', 'Apr 05', 'Apr 06', 'Apr 07', 'Apr 08', 'Apr 09', 'Apr 11', 'Apr 12', 'Apr 14', 'Apr 15', 'Apr 16', 'Apr 17', 'Apr 18', ''],
                 axisBorder: {
                     show: false,
                 },
@@ -5246,7 +5246,7 @@ var KTChartsWidget1 = function () {
                 enabled: false
             },
             xaxis: {
-                categories: ['Jan 5', 'Jan 7', 'Jan 9', 'Jan 11', 'Jan 13', 'Jan 15', 'Jan 17', 'Jan 19', 'Jan 20', 'Jan 21', 'Jan 23', 'Jan 24', 'Jan 25', 'Jan 26', 'Jan 24', 'Jan 28', 'Jan 29'],
+                categorie: ['Jan 5', 'Jan 7', 'Jan 9', 'Jan 11', 'Jan 13', 'Jan 15', 'Jan 17', 'Jan 19', 'Jan 20', 'Jan 21', 'Jan 23', 'Jan 24', 'Jan 25', 'Jan 26', 'Jan 24', 'Jan 28', 'Jan 29'],
                 axisBorder: {
                     show: false
                 },
@@ -5447,7 +5447,7 @@ var KTChartsWidget10 = function () {
                 colors: ['transparent']
             },
             xaxis: {
-                categories: ['Metals', 'Energy', 'Agro', 'Machines', 'Transport', 'Textile', 'Wood'],
+                categorie: ['Metals', 'Energy', 'Agro', 'Machines', 'Transport', 'Textile', 'Wood'],
                 axisBorder: {
                     show: false,
                 },
@@ -5667,7 +5667,7 @@ var KTChartsWidget11 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: ['', 'Apr 02', 'Apr 06', 'Apr 06', 'Apr 05', 'Apr 06', 'Apr 10', 'Apr 08', 'Apr 09', 'Apr 14', 'Apr 10', 'Apr 12', 'Apr 18', 'Apr 14',
+                categorie: ['', 'Apr 02', 'Apr 06', 'Apr 06', 'Apr 05', 'Apr 06', 'Apr 10', 'Apr 08', 'Apr 09', 'Apr 14', 'Apr 10', 'Apr 12', 'Apr 18', 'Apr 14',
                     'Apr 15', 'Apr 14', 'Apr 17', 'Apr 18', 'Apr 02', 'Apr 06', 'Apr 18', 'Apr 05', 'Apr 06', 'Apr 10', 'Apr 08', 'Apr 22', 'Apr 14', 'Apr 11', 'Apr 12', ''
                 ],
                 axisBorder: {
@@ -5885,7 +5885,7 @@ var KTChartsWidget12 = function () {
                 colors: ['transparent']
             },
             xaxis: {
-                categories: ['Grossey', 'Pet Food', 'Flowers', 'Restaurant', 'Kids Toys', 'Clothing', 'Still Water'],
+                categorie: ['Grossey', 'Pet Food', 'Flowers', 'Restaurant', 'Kids Toys', 'Clothing', 'Still Water'],
                 axisBorder: {
                     show: false,
                 },
@@ -7286,7 +7286,7 @@ var KTChartsWidget18 = function () {
                 colors: ['transparent']
             },
             xaxis: {
-                categories: ['QA Analysis', 'Marketing', 'Web Dev', 'Maths', 'Front-end Dev', 'Physics', 'Phylosophy'],
+                categorie: ['QA Analysis', 'Marketing', 'Web Dev', 'Maths', 'Front-end Dev', 'Physics', 'Phylosophy'],
                 axisBorder: {
                     show: false,
                 },
@@ -7896,7 +7896,7 @@ var KTChartsWidget2 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                categorie: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 axisBorder: {
                     show: false,
                 },
@@ -8076,7 +8076,7 @@ var KTChartsWidget20 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: ['', 'Apr 02', 'Apr 03', 'Apr 04', 'Apr 05', 'Apr 06', 'Apr 07', 'Apr 08', 'Apr 09', 'Apr 10', 'Apr 11', 'Apr 12', 'Apr 13', 'Apr 14', 'Apr 17', 'Apr 18', 'Apr 19', 'Apr 21', ''],
+                categorie: ['', 'Apr 02', 'Apr 03', 'Apr 04', 'Apr 05', 'Apr 06', 'Apr 07', 'Apr 08', 'Apr 09', 'Apr 10', 'Apr 11', 'Apr 12', 'Apr 13', 'Apr 14', 'Apr 17', 'Apr 18', 'Apr 19', 'Apr 21', ''],
                 axisBorder: {
                     show: false,
                 },
@@ -13913,7 +13913,7 @@ var KTChartsWidget26 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: ['', 'Apr 02', 'Apr 03', 'Apr 04', 'Apr 05', 'Apr 06', 'Apr 07', 'Apr 08', 'Apr 09', 'Apr 10', 'Apr 11', 'Apr 12', 'Apr 13', 'Apr 14', 'Apr 17', 'Apr 18', 'Apr 19', 'Apr 21', ''],
+                categorie: ['', 'Apr 02', 'Apr 03', 'Apr 04', 'Apr 05', 'Apr 06', 'Apr 07', 'Apr 08', 'Apr 09', 'Apr 10', 'Apr 11', 'Apr 12', 'Apr 13', 'Apr 14', 'Apr 17', 'Apr 18', 'Apr 19', 'Apr 21', ''],
                 axisBorder: {
                     show: false,
                 },
@@ -14112,7 +14112,7 @@ var KTChartsWidget27 = function () {
             },
             colors: ['#3E97FF', '#F1416C', '#50CD89', '#FFC700', '#7239EA'],
             xaxis: {
-                categories: ["USA", "India", 'Canada', 'Brasil', 'France'],
+                categorie: ["USA", "India", 'Canada', 'Brasil', 'France'],
                 labels: {
                     formatter: function (val) {
                         return val + "K"
@@ -14268,7 +14268,7 @@ var KTChartsWidget28 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: ['May 04', 'May 05', 'May 06', 'May 09', 'May 10', 'May 12', 'May 14', 'May 17', 'May 18', 'May 20', 'May 22', 'May 24', 'May 26', 'May 28', 'May 30'],
+                categorie: ['May 04', 'May 05', 'May 06', 'May 09', 'May 10', 'May 12', 'May 14', 'May 17', 'May 18', 'May 20', 'May 22', 'May 24', 'May 26', 'May 28', 'May 30'],
                 axisBorder: {
                     show: false,
                 },
@@ -14456,7 +14456,7 @@ var KTChartsWidget29 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: ['Apr 02', 'Apr 03', 'Apr 04', 'Apr 05', 'Apr 06', 'Apr 09', 'Apr 10', 'Apr 12', 'Apr 14', 'Apr 17', 'Apr 18', 'Apr 18', 'Apr 20', 'Apr 22', 'Apr 24'],
+                categorie: ['Apr 02', 'Apr 03', 'Apr 04', 'Apr 05', 'Apr 06', 'Apr 09', 'Apr 10', 'Apr 12', 'Apr 14', 'Apr 17', 'Apr 18', 'Apr 18', 'Apr 20', 'Apr 22', 'Apr 24'],
                 axisBorder: {
                     show: false,
                 },
@@ -14648,7 +14648,7 @@ var KTChartsWidget3 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: ['', 'Apr 02', 'Apr 03', 'Apr 04', 'Apr 05', 'Apr 06', 'Apr 07', 'Apr 08', 'Apr 09', 'Apr 10', 'Apr 11', 'Apr 12', 'Apr 13', 'Apr 14', 'Apr 15', 'Apr 16', 'Apr 17', 'Apr 18', ''],
+                categorie: ['', 'Apr 02', 'Apr 03', 'Apr 04', 'Apr 05', 'Apr 06', 'Apr 07', 'Apr 08', 'Apr 09', 'Apr 10', 'Apr 11', 'Apr 12', 'Apr 13', 'Apr 14', 'Apr 15', 'Apr 16', 'Apr 17', 'Apr 18', ''],
                 axisBorder: {
                     show: false,
                 },
@@ -15305,7 +15305,7 @@ var KTChartsWidget32 = function () {
                 colors: ['transparent']
             },
             xaxis: {
-                categories: ['Grossey', 'Pet Food', 'Flowers', 'Restaurant', 'Kids Toys', 'Clothing', 'Still Water'],
+                categorie: ['Grossey', 'Pet Food', 'Flowers', 'Restaurant', 'Kids Toys', 'Clothing', 'Still Water'],
                 axisBorder: {
                     show: false,
                 },
@@ -15522,7 +15522,7 @@ var KTChartsWidget33 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: labels,
+                categorie: labels,
                 axisBorder: {
                     show: false,
                 },
@@ -15781,7 +15781,7 @@ var KTChartsWidget34 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: labels,
+                categorie: labels,
                 axisBorder: {
                     show: false,
                 },
@@ -16042,7 +16042,7 @@ var KTChartsWidget35 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: labels,
+                categorie: labels,
                 axisBorder: {
                     show: false,
                 },
@@ -16289,7 +16289,7 @@ var KTChartsWidget36 = function () {
                 colors: [baseprimaryColor, basesuccessColor]
             },
             xaxis: {
-                categories: ['', '8 AM', '81 AM', '9 AM', '10 AM', '11 AM', '12 PM', '13 PM', '14 PM', '15 PM', '16 PM', '17 PM', '18 PM', '18:20 PM', '18:20 PM', '19 PM', '20 PM', '21 PM', ''],
+                categorie: ['', '8 AM', '81 AM', '9 AM', '10 AM', '11 AM', '12 PM', '13 PM', '14 PM', '15 PM', '16 PM', '17 PM', '18 PM', '18:20 PM', '18:20 PM', '19 PM', '20 PM', '21 PM', ''],
                 axisBorder: {
                     show: false,
                 },
@@ -16485,7 +16485,7 @@ var KTChartsWidget37 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: labels,
+                categorie: labels,
                 axisBorder: {
                     show: false,
                 },
@@ -16721,7 +16721,7 @@ var KTChartsWidget38 = function () {
                 colors: ['transparent']
             },
             xaxis: {
-                categories: ['E2E', 'IMC', 'SSMC', 'SSBD', 'ICCD', 'PAN', 'SBN'],
+                categorie: ['E2E', 'IMC', 'SSMC', 'SSBD', 'ICCD', 'PAN', 'SBN'],
                 axisBorder: {
                     show: false,
                 },
@@ -17111,7 +17111,7 @@ var KTChartsWidget4 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: ['', 'Apr 02', 'Apr 03', 'Apr 04', 'Apr 05', 'Apr 06', 'Apr 07', 'Apr 08', 'Apr 09', 'Apr 10', 'Apr 11', 'Apr 12', 'Apr 13', 'Apr 14', 'Apr 17', 'Apr 18', 'Apr 19', 'Apr 21', ''],
+                categorie: ['', 'Apr 02', 'Apr 03', 'Apr 04', 'Apr 05', 'Apr 06', 'Apr 07', 'Apr 08', 'Apr 09', 'Apr 10', 'Apr 11', 'Apr 12', 'Apr 13', 'Apr 14', 'Apr 17', 'Apr 18', 'Apr 19', 'Apr 21', ''],
                 axisBorder: {
                     show: false,
                 },
@@ -17533,7 +17533,7 @@ var KTChartsWidget41 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: labels,
+                categorie: labels,
                 axisBorder: {
                     show: false,
                 },
@@ -17766,7 +17766,7 @@ var KTChartsWidget42 = function () {
                 colors: [baseprimaryColor, basesuccessColor]
             },
             xaxis: {
-                categories: ['', '29 Sep', '1 Aug', '2 Aug', '3 Aug', '4 Aug', '5 Aug', '6 Aug', '7 Aug', '8 Aug', '9 Aug', '10 Aug', '11 Aug', '12 Aug', '13 Aug','14 Aug', '15 Aug', '16 Aug', ''],
+                categorie: ['', '29 Sep', '1 Aug', '2 Aug', '3 Aug', '4 Aug', '5 Aug', '6 Aug', '7 Aug', '8 Aug', '9 Aug', '10 Aug', '11 Aug', '12 Aug', '13 Aug','14 Aug', '15 Aug', '16 Aug', ''],
                 axisBorder: {
                     show: false,
                 },
@@ -17948,7 +17948,7 @@ var KTChartsWidget43 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                categorie: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 axisBorder: {
                     show: false,
                 },
@@ -18127,7 +18127,7 @@ var KTChartsWidget44 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                categorie: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 axisBorder: {
                     show: false,
                 },
@@ -18292,7 +18292,7 @@ var KTChartsWidget5 = function () {
             },
             colors: ['#3E97FF', '#F1416C', '#50CD89', '#FFC700', '#7239EA', '#50CDCD', '#3F4254'],
             xaxis: {
-                categories: ['Phones', 'Laptops', 'Headsets', 'Games', 'Keyboardsy', 'Monitors', 'Speakers'],
+                categorie: ['Phones', 'Laptops', 'Headsets', 'Games', 'Keyboardsy', 'Monitors', 'Speakers'],
                 labels: {
                     formatter: function (val) {
                       return val + "K"
@@ -18443,7 +18443,7 @@ var KTChartsWidget6 = function () {
             },
             colors: ['#3E97FF', '#F1416C', '#50CD89', '#FFC700', '#7239EA'],
             xaxis: {
-                categories: ["ECR - 90%", "FGI - 82%", 'EOQ - 75%', 'FMG - 60%', 'PLG - 50%'],
+                categorie: ["ECR - 90%", "FGI - 82%", 'EOQ - 75%', 'FMG - 60%', 'PLG - 50%'],
                 labels: {
                     formatter: function (val) {
                         return val + "K"
@@ -18592,7 +18592,7 @@ var KTChartsWidget7 = function () {
                 colors: ['transparent']
             },
             xaxis: {
-                categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                categorie: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
                 axisBorder: {
                     show: false,
                 },
@@ -18979,7 +18979,7 @@ var KTChartsWidget9 = function () {
                 colors: [baseColor]
             },
             xaxis: {
-                categories: ['', '06 Sep', '13 Sep', '20 Sep', '27 Sep', '30 Sep', ''],
+                categorie: ['', '06 Sep', '13 Sep', '20 Sep', '27 Sep', '30 Sep', ''],
                 axisBorder: {
                     show: false,
                 },

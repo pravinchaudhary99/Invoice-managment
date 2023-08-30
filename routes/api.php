@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\Roles\RoleController;
-use App\Http\Controllers\Users\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Roles\RoleController;
+use App\Http\Controllers\Users\UserController;
+use App\Http\Controllers\Products\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('users',[UserController::class,'index'])->name('users');
 Route::post('roles/{id}',[RoleController::class,'viewData'])->name('roles');
+
+Route::post('products/create', [ProductsController::class, 'create'])->name('products.create');

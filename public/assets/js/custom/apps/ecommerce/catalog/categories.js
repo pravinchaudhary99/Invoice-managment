@@ -1,7 +1,7 @@
 "use strict";
 
 // Class definition
-var KTAppEcommerceCategories = function () {
+var KTAppEcommercecategorie = function () {
     // Shared variables
     var table;
     var datatable;
@@ -110,5 +110,5 @@ var KTAppEcommerceCategories = function () {
 
 // On document ready
 KTUtil.onDOMContentLoaded(function () {
-    KTAppEcommerceCategories.init();
+    KTAppEcommercecategorie.init();
 });

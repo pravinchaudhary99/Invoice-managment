@@ -11,7 +11,7 @@ var KTProjectOverview = function () {
     var gray500 = KTUtil.getCssVariableValue('--kt-gray-500');
 
     // Private functions
-    var initChart = function () {        
+    var initChart = function () {
         // init chart
         var element = document.getElementById("project_overview_chart");
 
@@ -113,7 +113,7 @@ var KTProjectOverview = function () {
                 colors: [primary, success]
             },
             xaxis: {
-                categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+                categorie: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
                 axisBorder: {
                     show: false,
                 },

@@ -15,13 +15,13 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('product_name')->index();
             $table->float('product_price');
-            $table->integer('product_qty');
             $table->string('product_tax')->nullable();
             $table->string('product_discount_type')->nullable();
             $table->string('product_discount')->nullable();
-            $table->string('product_description')->nullable();
+            $table->longText('product_description')->nullable();
             $table->string('category')->index();
             $table->string('default_image_url')->nullable();
+            $table->string('status');
             $table->softDeletes();
             $table->timestamps();
         });

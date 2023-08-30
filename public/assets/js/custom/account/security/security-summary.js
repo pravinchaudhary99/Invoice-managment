@@ -10,7 +10,7 @@ var KTAccountSecuritySummary = function () {
         if (!element) {
             return;
         }
- 
+
         var options = {
             series: [{
                 name: 'Net Profit',
@@ -46,7 +46,7 @@ var KTAccountSecuritySummary = function () {
                 colors: ['transparent']
             },
             xaxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                categorie: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 axisBorder: {
                     show: false,
                 },
@@ -118,13 +118,13 @@ var KTAccountSecuritySummary = function () {
 
         var init = false;
         var tab = document.querySelector(tabSelector);
-        
+
         if (initByDefault === true) {
             setTimeout(function() {
                 chart.render();
                 init = true;
             }, 500);
-        }        
+        }
 
         tab.addEventListener('shown.bs.tab', function (event) {
             if (init == false) {
@@ -132,17 +132,17 @@ var KTAccountSecuritySummary = function () {
                 init = true;
             }
         })
-    } 
+    }
 
     // Public methods
     return {
         init: function () {
             initChart('#kt_security_summary_tab_hours_agents', '#kt_security_summary_chart_hours_agents', [50, 70, 90, 117, 80, 65, 80, 90, 115, 95, 70, 84], [50, 70, 90, 117, 80, 65, 70, 90, 115, 95, 70, 84], true);
             initChart('#kt_security_summary_tab_hours_clients', '#kt_security_summary_chart_hours_clients', [50, 70, 90, 117, 80, 65, 80, 90, 115, 95, 70, 84], [50, 70, 90, 117, 80, 65, 80, 90, 115, 95, 70, 84], false);
-           
+
             initChart('#kt_security_summary_tab_day', '#kt_security_summary_chart_day_agents', [50, 70, 80, 100, 90, 65, 80, 90, 115, 95, 70, 84], [50, 70, 90, 117, 60, 65, 80, 90, 100, 95, 70, 84], false);
             initChart('#kt_security_summary_tab_day_clients', '#kt_security_summary_chart_day_clients', [50, 70, 100, 90, 80, 65, 80, 90, 115, 95, 70, 84], [50, 70, 90, 115, 80, 65, 80, 90, 115, 95, 70, 84], false);
-           
+
             initChart('#kt_security_summary_tab_week', '#kt_security_summary_chart_week_agents', [50, 70, 75, 117, 80, 65, 80, 90, 115, 95, 50, 84], [50, 60, 90, 117, 80, 65, 80, 90, 115, 95, 70, 84], false);
             initChart('#kt_security_summary_tab_week_clients', '#kt_security_summary_chart_week_clients', [50, 70, 90, 117, 80, 65, 80, 90, 100, 80, 70, 84], [50, 70, 90, 117, 80, 65, 80, 90, 100, 95, 70, 84], false);
         }

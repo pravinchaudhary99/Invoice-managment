@@ -9,8 +9,8 @@ var KTAppEcommerceSaveProduct = function () {
     const initQuill = () => {
         // Define all elements for quill editor
         const elements = [
-            '#kt_ecommerce_add_product_description',
-            '#kt_ecommerce_add_product_meta_description'
+            '#product_description',
+            '#product_meta_description'
         ];
 
         // Loop all elements
@@ -45,7 +45,7 @@ var KTAppEcommerceSaveProduct = function () {
         // Define all elements for tagify
         const elements = [
             '#kt_ecommerce_add_product_category',
-            '#kt_ecommerce_add_product_tags'
+            '#product_tags'
         ];
 
         // Loop all elements
@@ -73,7 +73,7 @@ var KTAppEcommerceSaveProduct = function () {
 
     // Init form repeater --- more info: https://github.com/DubFriend/jquery.repeater
     const initFormRepeater = () => {
-        $('#kt_ecommerce_add_product_options').repeater({
+        $('#product_types').repeater({
             initEmpty: false,
 
             defaultValues: {
@@ -96,7 +96,7 @@ var KTAppEcommerceSaveProduct = function () {
     // Init condition select2
     const initConditionsSelect2 = () => {
         // Tnit new repeating condition types
-        const allConditionTypes = document.querySelectorAll('[data-kt-ecommerce-catalog-add-product="product_option"]');
+        const allConditionTypes = document.querySelectorAll('[data-kt-ecommerce-catalog-add-product="product_type"]');
         allConditionTypes.forEach(type => {
             if ($(type).hasClass("select2-hidden-accessible")) {
                 return;
@@ -111,8 +111,8 @@ var KTAppEcommerceSaveProduct = function () {
 
     // Init noUIslider
     const initSlider = () => {
-        var slider = document.querySelector("#kt_ecommerce_add_product_discount_slider");
-        var value = document.querySelector("#kt_ecommerce_add_product_discount_label");
+        var slider = document.querySelector("#product_discount_slider");
+        var value = document.querySelector("#product_discount_label");
 
         noUiSlider.create(slider, {
             start: [10],
@@ -133,7 +133,7 @@ var KTAppEcommerceSaveProduct = function () {
 
     // Init DropzoneJS --- more info:
     const initDropzone = () => {
-        var myDropzone = new Dropzone("#kt_ecommerce_add_product_media", {
+        var myDropzone = new Dropzone("#product_media", {
             url: "https://keenthemes.com/scripts/void.php", // Set the url for your upload script location
             paramName: "file", // The name that will be used to transfer the file
             maxFiles: 10,
@@ -151,9 +151,9 @@ var KTAppEcommerceSaveProduct = function () {
 
     // Handle discount options
     const handleDiscount = () => {
-        const discountOptions = document.querySelectorAll('input[name="discount_option"]');
-        const percentageEl = document.getElementById('kt_ecommerce_add_product_discount_percentage');
-        const fixedEl = document.getElementById('kt_ecommerce_add_product_discount_fixed');
+        const discountOptions = document.querySelectorAll('input[name="product_discount_type"]');
+        const percentageEl = document.getElementById('product_discount_percentage');
+        const fixedEl = document.getElementById('product_discount_fixed');
 
         discountOptions.forEach(option => {
             option.addEventListener('change', e => {
@@ -182,8 +182,8 @@ var KTAppEcommerceSaveProduct = function () {
 
     // Shipping option handler
     const handleShipping = () => {
-        const shippingOption = document.getElementById('kt_ecommerce_add_product_shipping_checkbox');
-        const shippingForm = document.getElementById('kt_ecommerce_add_product_shipping');
+        const shippingOption = document.getElementById('product_shipping_checkbox');
+        const shippingForm = document.getElementById('product_shipping');
 
         shippingOption.addEventListener('change', e => {
             const value = e.target.checked;
@@ -198,8 +198,8 @@ var KTAppEcommerceSaveProduct = function () {
 
     // Category status handler
     const handleStatus = () => {
-        const target = document.getElementById('kt_ecommerce_add_product_status');
-        const select = document.getElementById('kt_ecommerce_add_product_status_select');
+        const target = document.getElementById('product_status');
+        const select = document.getElementById('product_status_select');
         const statusClasses = ['bg-success', 'bg-warning', 'bg-danger'];
 
         $(select).on('change', function (e) {
@@ -237,10 +237,10 @@ var KTAppEcommerceSaveProduct = function () {
 
 
         // Handle datepicker
-        const datepicker = document.getElementById('kt_ecommerce_add_product_status_datepicker');
+        const datepicker = document.getElementById('product_status_datepicker');
 
         // Init flatpickr --- more info: https://flatpickr.js.org/
-        $('#kt_ecommerce_add_product_status_datepicker').flatpickr({
+        $('#product_status_datepicker').flatpickr({
             enableTime: true,
             dateFormat: "Y-m-d H:i",
         });
@@ -275,8 +275,8 @@ var KTAppEcommerceSaveProduct = function () {
         let validator;
 
         // Get elements
-        const form = document.getElementById('kt_ecommerce_add_product_form');
-        const submitButton = document.getElementById('kt_ecommerce_add_product_submit');
+        const form = document.getElementById('product_form');
+        const submitButton = document.getElementById('product_submit');
 
         // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
         validator = FormValidation.formValidation(
@@ -405,7 +405,7 @@ var KTAppEcommerceSaveProduct = function () {
             handleConditions();
             handleDiscount();
             handleShipping();
-            handleSubmit();
+            // handleSubmit();
         }
     };
 }();
