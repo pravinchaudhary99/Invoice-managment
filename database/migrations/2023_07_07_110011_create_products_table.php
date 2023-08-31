@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('product_discount_type')->nullable();
             $table->string('product_discount')->nullable();
             $table->longText('product_description')->nullable();
-            $table->string('category')->index();
             $table->string('default_image_url')->nullable();
             $table->string('status');
             $table->softDeletes();

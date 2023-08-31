@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('sku', 100)->nullable()->index();
             $table->string('barcode', 100)->nullable()->index();
             $table->string('title', 150)->index();
-            $table->integer('inventory_quantity');
+            $table->string('price', 150);
+            $table->integer('inventory_quantity')->nullable();
             $table->timestamps();
 
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');

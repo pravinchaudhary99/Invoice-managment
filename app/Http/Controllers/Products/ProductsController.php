@@ -30,19 +30,17 @@ class ProductsController extends Controller
             return redirect()->back()->withErrors($validator)->withInput()->with('error','Please fill the role name and one permission select');
         }
         try {
-            dump($request->all(),'test');
             // create product and other related data in DB.
             $productData = (new ProductsDataTransformers($request->all()))->transform();
             if ($request->has('avatar')) {
                 $imagePath = storeImageFile($request->file('avatar'));
                 $productData['default_image_url'] = $imagePath;
             }
-            dump($productData);
             ProductCreate::dispatchSync($productData);
         } catch (Exception $th) {
             Log::error('ProductsController@create error | '.$th->getMessage() . ' line | ' .$th->getLine());
         }
-        // return redirect()->route('products.list');
+        return redirect()->route('products.list');
     }
 
     public function edit() {

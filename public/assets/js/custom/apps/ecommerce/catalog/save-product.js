@@ -109,27 +109,6 @@ var KTAppEcommerceSaveProduct = function () {
     }
 
 
-    // Init noUIslider
-    const initSlider = () => {
-        var slider = document.querySelector("#product_discount_slider");
-        var value = document.querySelector("#product_discount_label");
-
-        noUiSlider.create(slider, {
-            start: [10],
-            connect: true,
-            range: {
-                "min": 1,
-                "max": 100
-            }
-        });
-
-        slider.noUiSlider.on("update", function (values, handle) {
-            value.innerHTML = Math.round(values[handle]);
-            if (handle) {
-                value.innerHTML = Math.round(values[handle]);
-            }
-        });
-    }
 
     // Init DropzoneJS --- more info:
     const initDropzone = () => {
@@ -177,22 +156,6 @@ var KTAppEcommerceSaveProduct = function () {
                     }
                 }
             });
-        });
-    }
-
-    // Shipping option handler
-    const handleShipping = () => {
-        const shippingOption = document.getElementById('product_shipping_checkbox');
-        const shippingForm = document.getElementById('product_shipping');
-
-        shippingOption.addEventListener('change', e => {
-            const value = e.target.checked;
-
-            if (value) {
-                shippingForm.classList.remove('d-none');
-            } else {
-                shippingForm.classList.add('d-none');
-            }
         });
     }
 
@@ -395,7 +358,6 @@ var KTAppEcommerceSaveProduct = function () {
             // Init forms
             initQuill();
             initTagify();
-            initSlider();
             initFormRepeater();
             initDropzone();
             initConditionsSelect2();
@@ -404,7 +366,6 @@ var KTAppEcommerceSaveProduct = function () {
             handleStatus();
             handleConditions();
             handleDiscount();
-            handleShipping();
             // handleSubmit();
         }
     };

@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\File;
 
 function storeImageFile($requestFile) {
     $image = $requestFile;
-    $imageName = time().'.'.$image->extension();
+    $imageName = time().'.'.$image->getClientOriginalName();
     if(!File::isDirectory(public_path('uploads'))){
         File::makeDirectory(public_path('uploads'), 0777, true, true);
     }

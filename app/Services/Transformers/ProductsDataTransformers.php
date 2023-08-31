@@ -28,7 +28,6 @@ class ProductsDataTransformers
             'product_discount_type' => $this->data['product_discount_type'],
             'product_discount' => $this->data['product_discount'],
             'product_description' => $this->data['product_description'] ?? '',
-            'category' => $this->data['category'],
             'status' => $this->data['status'],
         ];
     }
@@ -38,7 +37,7 @@ class ProductsDataTransformers
             'sku' => $this->data['sku'],
             'barcode' => $this->data['barcode'] ?? null,
             'inventory_quantity' => $this->data['product_qty'],
-            'title' => $this->data['product_types']
+            'product_types' => $this->data['product_types']
         ];
     }
 

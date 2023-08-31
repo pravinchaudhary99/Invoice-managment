@@ -216,33 +216,6 @@
                                 <div class="card-body pt-0">
                                     <!--begin::Input group-->
                                     <!--begin::Label-->
-                                    <label class="form-label">categorie</label>
-                                    <!--end::Label-->
-
-                                    <!--begin::Select2-->
-                                    <select class="form-select mb-2" data-control="select2" data-placeholder="Select an option"
-                                        data-allow-clear="true" multiple="multiple" name="category">
-                                        <option></option>
-                                        <option value="Computers">Computers</option>
-                                        <option value="Watches">Watches</option>
-                                        <option value="Headphones">Headphones</option>
-                                        <option value="Footwear">Footwear</option>
-                                        <option value="Cameras">Cameras</option>
-                                        <option value="Shirts">Shirts</option>
-                                        <option value="Household">Household</option>
-                                        <option value="Handbags">Handbags</option>
-                                        <option value="Wines">Wines</option>
-                                        <option value="Sandals">Sandals</option>
-                                    </select>
-                                    <!--end::Select2-->
-
-                                    <!--begin::Description-->
-                                    <div class="text-muted fs-7 mb-7">Add product to a category.</div>
-                                    <!--end::Description-->
-                                    <!--end::Input group-->
-
-                                    <!--begin::Input group-->
-                                    <!--begin::Label-->
                                     <label class="form-label d-block">Tags</label>
                                     <!--end::Label-->
 
@@ -302,7 +275,7 @@
                                             <!--begin::Card body-->
                                             <div class="card-body pt-0">
                                                 <!--begin::Input group-->
-                                                <div class="mb-10 fv-row">
+                                                <div class="mb-5 fv-row">
                                                     <!--begin::Label-->
                                                     <label class="required form-label">Product Name</label>
                                                     <!--end::Label-->
@@ -341,49 +314,6 @@
                                             <!--end::Card header-->
                                         </div>
                                         <!--end::General options-->
-                                        <!--begin::Media-->
-                                        <div class="card card-flush py-4">
-                                            <!--begin::Card header-->
-                                            <div class="card-header">
-                                                <div class="card-title">
-                                                    <h2>Media</h2>
-                                                </div>
-                                            </div>
-                                            <!--end::Card header-->
-
-                                            <!--begin::Card body-->
-                                            <div class="card-body pt-0">
-                                                <!--begin::Input group-->
-                                                <div class="fv-row mb-2">
-                                                    <!--begin::Dropzone-->
-                                                    <div class="dropzone" id="product_media">
-                                                        <!--begin::Message-->
-                                                        <div class="dz-message needsclick">
-                                                            <!--begin::Icon-->
-                                                            <i class="ki-duotone ki-file-up text-primary fs-3x"><span
-                                                                    class="path1"></span><span class="path2"></span></i>
-                                                            <!--end::Icon-->
-                                                            <!--begin::Info-->
-                                                            <div class="ms-4">
-                                                                <h3 class="fs-5 fw-bold text-gray-900 mb-1">Drop files here or
-                                                                    click to upload.</h3>
-                                                                <span class="fs-7 fw-semibold text-gray-400">Upload up to 10
-                                                                    files</span>
-                                                            </div>
-                                                            <!--end::Info-->
-                                                        </div>
-                                                    </div>
-                                                    <!--end::Dropzone-->
-                                                </div>
-                                                <!--end::Input group-->
-
-                                                <!--begin::Description-->
-                                                <div class="text-muted fs-7">Set the product media gallery.</div>
-                                                <!--end::Description-->
-                                            </div>
-                                            <!--end::Card header-->
-                                        </div>
-                                        <!--end::Media-->
 
                                         <!--begin::Pricing-->
                                         <div class="card card-flush py-4">
@@ -519,17 +449,10 @@
                                                     <label class="form-label">Set Discount Percentage</label>
                                                     <!--end::Label-->
 
-                                                    <!--begin::Slider-->
-                                                    <div class="d-flex flex-column text-center mb-5">
-                                                        <div class="d-flex align-items-start justify-content-center mb-7">
-                                                            <span class="fw-bold fs-3x"
-                                                                id="product_discount_label">0</span>
-                                                            <span class="fw-bold fs-4 mt-1 ms-2">%</span>
-                                                        </div>
-                                                        <div id="product_discount_slider" class="noUi-sm">
-                                                        </div>
-                                                    </div>
-                                                    <!--end::Slider-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" name="product_discount" class="form-control mb-2"
+                                                        placeholder="Discounted price" />
+                                                    <!--end::Input-->
 
                                                     <!--begin::Description-->
                                                     <div class="text-muted fs-7">Set a percentage discount to be applied on
@@ -580,6 +503,49 @@
                                             <!--end::Card header-->
                                         </div>
                                         <!--end::Pricing-->
+                                        <!--begin::Media-->
+                                        <div class="card card-flush py-4">
+                                            <!--begin::Card header-->
+                                            <div class="card-header">
+                                                <div class="card-title">
+                                                    <h2>Media</h2>
+                                                </div>
+                                            </div>
+                                            <!--end::Card header-->
+
+                                            <!--begin::Card body-->
+                                            <div class="card-body pt-0">
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-2">
+                                                    <!--begin::Dropzone-->
+                                                    <div class="dropzone" id="product_media">
+                                                        <!--begin::Message-->
+                                                        <div class="dz-message needsclick">
+                                                            <!--begin::Icon-->
+                                                            <i class="ki-duotone ki-file-up text-primary fs-3x"><span
+                                                                    class="path1"></span><span class="path2"></span></i>
+                                                            <!--end::Icon-->
+                                                            <!--begin::Info-->
+                                                            <div class="ms-4">
+                                                                <h3 class="fs-5 fw-bold text-gray-900 mb-1">Drop files here or
+                                                                    click to upload.</h3>
+                                                                <span class="fs-7 fw-semibold text-gray-400">Upload up to 10
+                                                                    files</span>
+                                                            </div>
+                                                            <!--end::Info-->
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Dropzone-->
+                                                </div>
+                                                <!--end::Input group-->
+
+                                                <!--begin::Description-->
+                                                <div class="text-muted fs-7">Set the product media gallery.</div>
+                                                <!--end::Description-->
+                                            </div>
+                                            <!--end::Card header-->
+                                        </div>
+                                        <!--end::Media-->
                                     </div>
                                 </div>
                                 <!--end::Tab pane-->
@@ -601,57 +567,77 @@
                                             <!--begin::Card body-->
                                             <div class="card-body pt-0">
                                                 <!--begin::Input group-->
-                                                <div class="mb-10 fv-row">
-                                                    <!--begin::Label-->
-                                                    <label class="required form-label">SKU</label>
-                                                    <!--end::Label-->
+                                                <div class="form-group d-flex flex-wrap align-items-center gap-6">
+                                                    <div class="mb-12 fv-row w-200 w-md-300px">
+                                                        <!--begin::Label-->
+                                                        <label class="required form-label">SKU</label>
+                                                        <!--end::Label-->
 
-                                                    <!--begin::Input-->
-                                                    <input type="text" name="sku" class="form-control mb-2"
-                                                        placeholder="SKU Number" value="" />
-                                                    <!--end::Input-->
+                                                        <!--begin::Input-->
+                                                        <input type="text" name="sku" class="form-control mb-2"
+                                                            placeholder="SKU Number" value="" />
+                                                        <!--end::Input-->
 
-                                                    <!--begin::Description-->
-                                                    <div class="text-muted fs-7">Enter the product SKU.</div>
-                                                    <!--end::Description-->
-                                                </div>
-                                                <!--end::Input group-->
-
-                                                <!--begin::Input group-->
-                                                <div class="mb-10 fv-row">
-                                                    <!--begin::Label-->
-                                                    <label class="required form-label">Barcode</label>
-                                                    <!--end::Label-->
-
-                                                    <!--begin::Input-->
-                                                    <input type="text" name="barcode" class="form-control mb-2"
-                                                        placeholder="Barcode Number" value="" />
-                                                    <!--end::Input-->
-
-                                                    <!--begin::Description-->
-                                                    <div class="text-muted fs-7">Enter the product barcode number.</div>
-                                                    <!--end::Description-->
-                                                </div>
-                                                <!--end::Input group-->
-
-                                                <!--begin::Input group-->
-                                                <div class="mb-10 fv-row">
-                                                    <!--begin::Label-->
-                                                    <label class="required form-label">Quantity</label>
-                                                    <!--end::Label-->
-
-                                                    <!--begin::Input-->
-                                                    <div class="d-flex gap-3">
-                                                        <input type="number" name="product_qty" class="form-control mb-2"
-                                                            placeholder="product qty" value="" />
+                                                        <!--begin::Description-->
+                                                        <div class="text-muted fs-7">Enter the product SKU.</div>
+                                                        <!--end::Description-->
                                                     </div>
-                                                    <!--end::Input-->
+                                                    <div class="mb-12 fv-row w-200 w-md-300px">
+                                                       <!--begin::Label-->
+                                                        <label class="required form-label">Barcode</label>
+                                                        <!--end::Label-->
 
-                                                    <!--begin::Description-->
-                                                    <div class="text-muted fs-7">Enter the product quantity.</div>
-                                                    <!--end::Description-->
+                                                        <!--begin::Input-->
+                                                        <input type="text" name="barcode" class="form-control mb-2"
+                                                            placeholder="Barcode Number" value="" />
+                                                        <!--end::Input-->
+
+                                                        <!--begin::Description-->
+                                                        <div class="text-muted fs-7">Enter the product barcode number.</div>
+                                                        <!--end::Description-->
+                                                    </div>
                                                 </div>
                                                 <!--end::Input group-->
+                                                <div class="form-group d-flex flex-wrap align-items-center gap-6">
+                                                    <!--begin::Input group-->
+                                                    <div class="mb-10 fv-row w-200 w-md-300px">
+                                                        <!--begin::Label-->
+                                                        <label class="required form-label">Quantity</label>
+                                                        <!--end::Label-->
+
+                                                        <!--begin::Input-->
+                                                        <div class="d-flex gap-3">
+                                                            <input type="number" name="product_qty" class="form-control mb-2"
+                                                                placeholder="product qty" value="" />
+                                                        </div>
+                                                        <!--end::Input-->
+
+                                                        <!--begin::Description-->
+                                                        <div class="text-muted fs-7">Enter the product quantity.</div>
+                                                        <!--end::Description-->
+                                                    </div>
+                                                    <!--end::Input group-->
+                                                    <div class="mb-10 fv-row w-200 w-md-300px">
+                                                        <!--begin::Input group-->
+                                                        <!--begin::Label-->
+                                                        <label class="form-label">Add Product Variations</label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Select2-->
+                                                        <div class="d-flex gap-3">
+                                                            <select class="form-select" name="product_type"
+                                                                data-placeholder="Select a variation"
+                                                                data-kt-ecommerce-catalog-add-product="product_type">
+                                                                <option></option>
+                                                                <option value="color">Color</option>
+                                                                <option value="size">Size</option>
+                                                                <option value="material">Material</option>
+                                                                <option value="style">Style</option>
+                                                            </select>
+                                                        </div>
+                                                        <!--end::Select2-->
+                                                    </div>
+                                                    <!--end::Input group-->
+                                                </div>
 
                                             </div>
                                             <!--end::Card header-->
@@ -675,57 +661,48 @@
                                                     <!--begin::Label-->
                                                     <label class="form-label">Add Product Variations</label>
                                                     <!--end::Label-->
-
                                                     <!--begin::Repeater-->
-                                                    <div id="product_types">
-                                                        <!--begin::Form group-->
-                                                        <div class="form-group">
-                                                            <div data-repeater-list="product_types"
-                                                                class="d-flex flex-column gap-3">
-                                                                <div
-                                                                    class="form-group d-flex flex-wrap align-items-center gap-5">
-                                                                    <!--begin::Select2-->
-                                                                    <div class="w-100 w-md-200px">
-                                                                        <select class="form-select" name="product_type"
-                                                                            data-placeholder="Select a variation"
-                                                                            data-kt-ecommerce-catalog-add-product="product_type">
-                                                                            <option></option>
-                                                                            <option value="color">Color</option>
-                                                                            <option value="size">Size</option>
-                                                                            <option value="material">Material</option>
-                                                                            <option value="style">Style</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <!--end::Select2-->
-                                                                    <div data-repeater-item class="form-group d-flex flex-wrap align-items-center gap-5">
-
-                                                                        <!--begin::Input-->
-                                                                        <input type="text" class="form-control mw-100 w-200px"
-                                                                            name="product_type_value" placeholder="Variation" />
-                                                                        <!--end::Input-->
-
-                                                                        <button type="button" data-repeater-delete
-                                                                            class="btn btn-sm btn-icon btn-light-danger">
-                                                                            <i class="ki-duotone ki-cross-square">
-                                                                            <i class="path1"></i>
-                                                                            <i class="path2"></i>
-                                                                            </i></button>
-                                                                    </div>
-                                                                </div>
+                                            <div id="product_types">
+                                                <!--begin::Form group-->
+                                                <div class="form-group">
+                                                    <div data-repeater-list="product_types"
+                                                        class="d-flex flex-column gap-3">
+                                                        <div data-repeater-item=""
+                                                            class="form-group d-flex flex-wrap align-items-center gap-5">
+                                                            <!--begin::Select2-->
+                                                            <div class="w-100 w-md-200px">
+                                                                <!--begin::Input-->
+                                                                <input type="text" class="form-control mw-100 w-200px"
+                                                                name="product_types[0][product_type_title]"
+                                                                placeholder="Title">
+                                                            <!--end::Input-->
                                                             </div>
-                                                        </div>
-                                                        <!--end::Form group-->
+                                                            <!--end::Select2-->
 
-                                                        <!--begin::Form group-->
-                                                        <div class="form-group mt-5">
-                                                            <button type="button" data-repeater-create
-                                                                class="btn btn-sm btn-light-primary">
-                                                                <i class="ki-duotone ki-plus fs-2"></i> Add another variation
-                                                            </button>
+                                                            <!--begin::Input-->
+                                                            <input type="text" class="form-control mw-100 w-200px"
+                                                                name="product_types[0][product_type_value]"
+                                                                placeholder="Price">
+                                                            <!--end::Input-->
+
+                                                            <button type="button" data-repeater-delete=""
+                                                                class="btn btn-sm btn-icon btn-light-danger">
+                                                                <i class="ki-outline ki-cross fs-1"></i> </button>
                                                         </div>
-                                                        <!--end::Form group-->
                                                     </div>
-                                                    <!--end::Repeater-->
+                                                </div>
+                                                <!--end::Form group-->
+
+                                                <!--begin::Form group-->
+                                                <div class="form-group mt-5">
+                                                    <button type="button" data-repeater-create=""
+                                                        class="btn btn-sm btn-light-primary">
+                                                        <i class="ki-outline ki-plus fs-2"></i> Add another variation
+                                                    </button>
+                                                </div>
+                                                <!--end::Form group-->
+                                            </div>
+                                            <!--end::Repeater-->
                                                 </div>
                                                 <!--end::Input group-->
                                             </div>
